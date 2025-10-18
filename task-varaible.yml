@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    NAME: devesecops with aws
+    course: devesecops with aws
     DURATION: 10 hrs
     TRAINER: arjun reddy
   tasks:
