@@ -1,8 +1,7 @@
-- name: play level variable
+- name: inventory vaiables
   hosts: local
   connection: local
-  
   tasks:
-    - name: printing the student info
-      ansible.builtin.debug:
-        msg: "student name is: {{ NAME }}, class: {{ CLASS }}, branch: {{ BRANCH }}, collegename: {{ COLLEGENAME }}"
+  - name: printing the student info
+    ansible.builtin.debug:
+      msg: "student name is: {{ NAME }}, class: {{ CLASS }}, branch: {{ BRANCH }}, collegename: {{ COLLEGENAME }}"
