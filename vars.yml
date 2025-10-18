@@ -2,11 +2,12 @@
   hosts: local
   connection: local
   vars:
-    COURSE: ansible
-    DURATION: 10 hrs
-    TRAINER: arjun reddy
+    NAME: arjun
+    CLASS: btech
+    BRANCH: mechanical
+    COLLEGENAME: chdl
   tasks:
-  - name: printing the course info
-    ansible.builtin.debug:
-      msg: "course name is {{ COURSE }}, duration: {{ DURATION }}, TRAINER: {{ TRAINER }}"
+    - name: printing the student info
+      ansible.builtin.debug:
+        msg: "student name is: {{ NAME }}, class: {{ CLASS }}, branch: {{ BRANCH }}, collegename: {{ COLLEGENAME }}"
   
