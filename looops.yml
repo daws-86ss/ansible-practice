@@ -3,10 +3,12 @@
   connection: local
   become: yes
   tasks:
-  - name: {{ item }}
+  - name: packages names
     ansible.builtin.package:
-    state: present
-  loop:
-  - nginx
-  - zip
-  - mysql
+    - name: {{ item }}
+      state: latest
+    loop:
+    - nginx
+    - zip
+    - mysql
+  
