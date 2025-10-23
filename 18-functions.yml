@@ -5,6 +5,7 @@
     name: "Arjun Reddy Keellapati"
     gmail: ARJUNreddy90@GMAIL.COM
     fruits: mangoes, apples, banananas, pomogranates
+    ipaddress: "298.289.09.43"
     tags:
     # dictionary to list
       Application: payment
@@ -52,4 +53,8 @@
   - name: convert lowercase
     ansible.builtin.debug:
       msg: "name is {{ gmail | lower }}"
+
+  - name: checking ipaddress valid or not 
+    ansible.builtin.debug:
+      msg: "name is {{ ipaddress | ansible.utils.ipv4 }}"
     
