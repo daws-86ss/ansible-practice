@@ -4,8 +4,15 @@
   vars:
     fruits: mangoes, apples, banananas, pomogranates
     tags:
+    # dictionary to list
       Application: payment
       Environment: dev
+      # list to dictionary
+    listtags:
+      - key: Application
+        value: payment
+      - key: Environment
+        value: dev
   tasks:
   - name: default function
     ansible.builtin.debug:
@@ -18,3 +25,7 @@
   - name: convert dictioary to list
     ansible.builtin.debug:
       msg: "tags are {{ tags | dict2items }}"
+
+  - name: convert list to dictoionary
+    ansible.builtin.debug:
+      msg: "tags are {{ listtags | items2dict  }}"
