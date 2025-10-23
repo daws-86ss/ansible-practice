@@ -3,6 +3,9 @@
   connection: local
   vars:
     fruits: mangoes, apples, banananas, pomogranates
+    tags:
+    Application: payment
+    Environment: dev
   tasks:
   - name: default function
     ansible.builtin.debug:
@@ -11,3 +14,7 @@
   - name: convert strings to list
     ansible.builtin.debug:
       msg: " technogies are {{ fruits | split(',') }}"
+
+  - name: convert dictioary to list
+    ansible.builtin.debug:
+      msg: "tags are {{ tags | | dict2items }}"
