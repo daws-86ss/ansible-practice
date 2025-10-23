@@ -57,4 +57,14 @@
   - name: checking ipaddress valid or not 
     ansible.builtin.debug:
       msg: "name is {{ ipaddress | ansible.utils.ipv4 }}"
+
+  - name: grep for root
+    ansible.builtin.command: cat /etc/passwd | grep root
+    register: command_output
+
+  - name: print the output for command
+    ansible.builtin.debug: 
+      msg: "{{ command_output }}"
+
+
     
