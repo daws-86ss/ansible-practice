@@ -8,6 +8,6 @@
     ansible.builtin.debug:
       msg: " hello {{ name | default('Ramesh') }}"
 
-  - name: default function
+  - name: convert strings to list
     ansible.builtin.debug:
       msg: " technogies are {{ technologies | split(',') }}
