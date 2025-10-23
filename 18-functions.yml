@@ -67,8 +67,9 @@
       msg: "{{ command_output }}"
 
   - name: redirect the output
-    ansible.builtin.command: ls-ltr 
+    ansible.builtin.shell: ls-ltr 
     register: redirect_output
+    ignore_error: true
 
   - name: print the redirect output
     ansible.builtin.debug: 
