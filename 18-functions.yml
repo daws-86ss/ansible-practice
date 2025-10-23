@@ -1,7 +1,13 @@
 - name: functions
   hosts: local
   connection: local
+  vars:
+    technologies: devops, linux, shell, ansible
   tasks:
   - name: default function
     ansible.builtin.debug:
       msg: " hello {{ name | default('Ramesh') }}"
+
+  - name: default function
+    ansible.builtin.debug:
+      msg: " technogies are {{ technologies | split(',') }}
