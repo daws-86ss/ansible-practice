@@ -4,4 +4,4 @@
   tasks:
   - name: default function
     ansible.builtin.debug:
-    msg: " hello {{ name | default( ramesh }}"
+    msg: " hello {{ name | default('Ramesh') }}"
