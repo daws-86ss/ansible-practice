@@ -66,5 +66,13 @@
     ansible.builtin.debug: 
       msg: "{{ command_output }}"
 
+  - name: redirections
+    ansible.builtin.command: ls-lrt > /tmp/output.txt
+    register: redirect_output
+
+  - name: print the output for command
+    ansible.builtin.debug: 
+      msg: "{{ redirect_output }}"
+
 
     
