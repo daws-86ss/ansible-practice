@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    technologies: devops, linux, shell, ansible
+    fruits: mangoes, apples, banananas, pomogranates
   tasks:
   - name: default function
     ansible.builtin.debug:
@@ -10,4 +10,4 @@
 
   - name: convert strings to list
     ansible.builtin.debug:
-      msg: " technogies are {{ technologies | split(',') }}"
+      msg: " technogies are {{ fruits | split(',') }}"
