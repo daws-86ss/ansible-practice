@@ -2,6 +2,8 @@
   hosts: local
   connection: local
   vars:
+    name: "Arjun Reddy Keellapati"
+    gmail: ARJUNreddy90@GMAIL.COM
     fruits: mangoes, apples, banananas, pomogranates
     tags:
     # dictionary to list
@@ -42,4 +44,12 @@
     ansible.builtin.copy:
       dest: "./student-data.json"
       content: "{{ student_yaml | to_nice_json }}"
+
+  - name: convert uppercase
+    ansible.builtin.debug:
+      msg: "name is {{ name | uppercase }}"
+
+  - name: convert uppercase
+    ansible.builtin.debug:
+      msg: "name is {{ gmail | lowercase }}"
     
