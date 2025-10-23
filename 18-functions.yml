@@ -13,8 +13,8 @@
 
   - name: convert strings to list
     ansible.builtin.debug:
-      msg: " technogies are {{ fruits | split(',') }}"
+      msg: " fruits are {{ fruits | split(',') }}"
 
   - name: convert dictioary to list
     ansible.builtin.debug:
-      msg: "tags are {{ tags | | dict2items }}"
+      msg: "tags are {{ tags | dict2items }}"
